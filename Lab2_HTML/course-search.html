@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Search Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Course Search Portal</h1>
+        <p>Find your courses quickly using the search form</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="xhtml-vs-html5.html">HTML Structure Comparison</a></li>
+            <li><a href="courses.html">Courses & Announcements</a></li>
+            <li><a href="course-search.html">Course Search</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Search Courses</h2>
+        
+        <form method="GET" action="search-results.html">
+            <label for="course">Course Name:</label>
+            <input type="text" id="course" name="course" placeholder="Enter course name or keyword (e.g., AI, Web Development)" required>
+            
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">-- Select a Department --</option>
+                <option value="CS">Computer Science</option>
+                <option value="DS">Data Science</option>
+                <option value="NET">Networking</option>
+                <option value="WEB">Web Development</option>
+                <option value="AI">Artificial Intelligence</option>
+                <option value="SE">Software Engineering</option>
+            </select>
+            
+            <button type="submit">Search Courses</button>
+        </form>
+        
+        <h3>Why GET Method?</h3>
+        <p>This form uses the GET method because it searches for non-sensitive, public course information. The search parameters appear in the URL as a query string (e.g., ?course=AI&department=CS), making it easy to bookmark favorite searches or share search results with classmates.</p>
+    </main>
+    
+    <a href="index.html">← Back to Home</a>
+    
+    <footer>
+        <p>&copy; 2026 Student Feedback Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
