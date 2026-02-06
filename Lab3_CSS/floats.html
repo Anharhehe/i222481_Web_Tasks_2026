@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5: CSS Floats Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <div class="float-container clearfix">
+    <div class="left-section">
+      <h2>Featured Articles</h2>
+
+      <div class="float-item">
+        <img src="1.png" alt="Article 1">
+        <div class="float-item-text">
+          <h3>Article One</h3>
+          <p>This is the first article displayed in the left section. The image floats to the left with text wrapping around it.</p>
+        </div>
+      </div>
+
+      <div class="float-item">
+        <img src="2.png" alt="Article 2">
+        <div class="float-item-text">
+          <h3>Article Two</h3>
+          <p>This is the second article with float layout. Each article contains an image and descriptive text.</p>
+        </div>
+      </div>
+
+      <div class="float-item">
+        <img src="3.png" alt="Article 3">
+        <div class="float-item-text">
+          <h3>Article Three</h3>
+          <p>This is the third article. The float technique allows flexible text and image arrangement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h3>University Information</h3>
+      <p>This section is floated to the right and occupies 35% of the container width, while the left section takes 60%.</p>
+      <p>The right section contains text and a link to the university website.</p>
+      <a href="https://www.nu.edu.pk/" target="_blank">Visit University Website</a>
+    </div>
+  </div>
+</body>
+</html>
