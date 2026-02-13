@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Portal - Submit Feedback</title>
+</head>
+<body>
+    <header>
+        <h1>Student Feedback Portal</h1>
+        <p>Submit feedback for your courses</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="xhtml-vs-html5.html">HTML Structure Comparison</a></li>
+            <li><a href="courses.html">Courses & Announcements</a></li>
+            <li><a href="course-search.html">Course Search</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <form method="POST" action="feedback-received.html">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">-- Select a Course --</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Networking">Networking</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Mobile Development">Mobile Development</option>
+            </select>
+            
+            <label>Course Rating (1-5):</label>
+            <input type="radio" id="rating1" name="rating" value="1" required> <label for="rating1">1 - Poor</label><br>
+            <input type="radio" id="rating2" name="rating" value="2"> <label for="rating2">2 - Fair</label><br>
+            <input type="radio" id="rating3" name="rating" value="3"> <label for="rating3">3 - Good</label><br>
+            <input type="radio" id="rating4" name="rating" value="4"> <label for="rating4">4 - Very Good</label><br>
+            <input type="radio" id="rating5" name="rating" value="5"> <label for="rating5">5 - Excellent</label><br>
+            
+            <label for="comments">Detailed Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Please share your detailed feedback about the course, including what went well and areas for improvement..." required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+        
+        <h3>Why POST Method?</h3>
+        <p>This form uses the POST method because it collects sensitive personal information (name, email) and detailed feedback. The POST method keeps this data hidden from the URL, protecting your privacy and ensuring secure data transmission to our server.</p>
+    </main>
+    
+    <a href="index.html">← Back to Home</a>
+    
+    <footer>
+        <p><strong>Questions or Need Assistance?</strong></p>
+        <p>Email us at <a href="mailto:feedback@university.edu">feedback@university.edu</a></p>
+        <p>&copy; 2026 Student Feedback Portal. All rights reserved.<br>
+        Thank you for helping us improve our educational programs!</p>
+    </footer>
+</body>
+</html>
