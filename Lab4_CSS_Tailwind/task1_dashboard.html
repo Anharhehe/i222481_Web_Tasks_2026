@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0a1a4f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        /* Navigation Menu - Flexbox */
+        nav {
+            background-color: #1e3a8a;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #0a1a4f;
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        main {
+            padding: 30px 20px;
+        }
+
+        /* Activity Section Title */
+        h2 {
+            font-size: 17px;
+            color: #0a1a4f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* CSS Grid for Activity Cards */
+        .activity-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Media Gallery Section */
+        .gallery-section {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-section h2 {
+            font-size: 17px;
+            color: #0a1a4f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .activity-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+
+            .activity-section {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Activity Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#activities">Activities</a>
+        <a href="#events">Events</a>
+        <a href="#profile">Profile</a>
+    </nav>
+
+    <main>
+        <h2>Recent Activities</h2>
+        <div class="activity-section">
+            <div class="card">
+                <h3>Math Assignment</h3>
+                <p>Complete calculus assignment by Friday. Submit solutions for chapters 5-7.</p>
+            </div>
+            <div class="card">
+                <h3>Project Submission</h3>
+                <p>Web development group project due next week. Review requirements and deadlines.</p>
+            </div>
+            <div class="card">
+                <h3>Exam Preparation</h3>
+                <p>Study guide available for final exam. Practice tests now available online.</p>
+            </div>
+            <div class="card">
+                <h3>Club Meeting</h3>
+                <p>Coding club meetup scheduled for Thursday at 3 PM in the tech lab.</p>
+            </div>
+            <div class="card">
+                <h3>Internship Fair</h3>
+                <p>Annual internship fair this month. Register your interest with your CV ready.</p>
+            </div>
+            <div class="card">
+                <h3>Grade Review</h3>
+                <p>Mid-semester grades now available. Schedule office hours with instructors as needed.</p>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <h2>Media Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%231d4ed8' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3E1%3C/text%3E%3C/svg%3E" alt="Gallery item 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%231e3a8a' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3E2%3C/text%3E%3C/svg%3E" alt="Gallery item 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%230a1a4f' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3E3%3C/text%3E%3C/svg%3E" alt="Gallery item 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%231d4ed8' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3E4%3C/text%3E%3C/svg%3E" alt="Gallery item 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%231e3a8a' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3E5%3C/text%3E%3C/svg%3E" alt="Gallery item 5">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
